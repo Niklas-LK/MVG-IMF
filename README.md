@@ -29,6 +29,8 @@ For example:
 ```python
 from Simulate import Simulate
 
+vec = np.loadtxt('vec.txt')
+
 df_hat = pd.DataFrame(Simulate(
     n=100,
     cohort='luca',
@@ -36,6 +38,6 @@ df_hat = pd.DataFrame(Simulate(
     dataset='train',
     label=0,
     sex=0
-))
+), columns=vec)
 
 ```
